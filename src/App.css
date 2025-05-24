@@ -1,0 +1,80 @@
+.my_container {
+  max-width: 1440px;
+  padding-inline: 12px;
+  margin: 0 auto;
+}
+.bg_homeImg {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    url(./assets/img/png/artisticRedImg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body {
+  overflow-x: hidden;
+}
+.custom_vh {
+  min-height: calc(100vh - 164px);
+}
+.basinImg {
+  background-image: url(./assets/img/png/basinImg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+}
+.pedestalImg {
+  background-image: url(./assets/img/png/pedestalImg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.undermountImg {
+  background-image: url(./assets/img/png/undermountImg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.dropInImg {
+  background-image: url(./assets/img/png/dropInImg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.customImg {
+  background-image: url(./assets/img/png/customIMg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.productImg {
+  background-image: url(./assets/img/png/productImg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 639.99px) {
+  .custom_vh {
+    min-height: calc(100vh - 123px);
+  }
+  .testimonal_slider1 {
+    display: none;
+  }
+  .testimonal_slider2 {
+    display: block;
+  }
+}
+@media (min-width: 640px) {
+  .custom_vh {
+    min-height: calc(100vh - 154px);
+  }
+  .testimonal_slider1 {
+    display: block;
+  }
+  .testimonal_slider2 {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .custom_vh {
+    min-height: calc(100vh - 150px);
+  }
+}

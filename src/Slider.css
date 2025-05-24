@@ -1,0 +1,76 @@
+/* ---------- slick slider ----------- */
+.slick-dots {
+  bottom: 25px !important;
+}
+.slick-dots li button {
+  background: transparent;
+}
+.slick-dots li button:before {
+  content: "•";
+  color: #b1eaff !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #898989;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button:before {
+  font-size: 14px;
+  color: #b1eaff;
+  opacity: 1;
+}
+
+/* -------------- testimonial -------------- */
+.testimonal_slider2 .slick-dots {
+  bottom: -25px !important;
+}
+.testimonal_slider2 .slick-dots li button {
+  background: transparent;
+}
+.testimonal_slider2 .slick-dots li button:before {
+  content: "•";
+  color: transparent !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.testimonal_slider2 .slick-dots li button:before {
+  font-size: 10px;
+  color: #898989;
+  transition: all 0.3s ease;
+}
+
+.testimonal_slider2 .slick-dots li.slick-active button:before {
+  font-size: 14px;
+  color: #b1eaff;
+  opacity: 1;
+}
+/* -------------- testimonial -------------- */
+.services_slider .slick-dots {
+  bottom: -35px !important;
+}
+.services_slider .slick-dots li button {
+  background: transparent;
+}
+.services_slider .slick-dots li button:before {
+  content: "•";
+  color: white !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.services_slider .slick-dots li button:before {
+  font-size: 10px;
+  color: #898989;
+  transition: all 0.3s ease;
+}
+
+.services_slider .slick-dots li.slick-active button:before {
+  font-size: 14px;
+  color: #b1eaff;
+  opacity: 1;
+}
