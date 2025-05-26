@@ -478,7 +478,7 @@ const Home = () => {
             <Slider ref={sliderRef3} {...testimonialSlider}>
               {testimonialData.map((item, index) => (
                 <div key={index} className="px-2 ">
-                  <div className="flex">
+                  <div className="flex justify-between">
                     <Testimonials testi={item} />
                   </div>
                 </div>

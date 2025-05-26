@@ -89,11 +89,11 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li className="md:block hidden">
-                  <Link className="lg:text-xl text-lg font-normal">Home</Link>
+                  <Link className="lg:text-xl text-lg font-normal" to="/">Home</Link>
                 </li>
                 <li className="md:block hidden">
                   <Link
-                    to="/shop"
+                    to="/Shop"
                     className="flex items-center gap-3 lg:text-xl text-lg font-normal"
                   >
                     Shop <img src={downArrow} alt="" />
@@ -111,10 +111,10 @@ const NavBar = () => {
             <div className="md:w-3/12 w-2/12">
               <ul className="flex items-center justify-end lg:gap-5 gap-4">
                 <li className="md:block hidden">
-                  <Link className="lg:text-xl text-lg font-normal">About</Link>
+                  <Link to="/about" className="lg:text-xl text-lg font-normal">About</Link>
                 </li>
                 <li className="md:block hidden">
-                  <Link className="lg:text-xl text-lg font-normal">
+                  <Link to="/contact" className="lg:text-xl text-lg font-normal">
                     Contact
                   </Link>
                 </li>
@@ -145,7 +145,7 @@ const NavBar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/shop"
+                    to="/Shop"
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center gap-2"
                   >
@@ -153,12 +153,12 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/About" onClick={() => setIsMenuOpen(false)}>
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/Contact" onClick={() => setIsMenuOpen(false)}>
                     Contact
                   </Link>
                 </li>

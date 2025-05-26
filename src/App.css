@@ -13,11 +13,16 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.bg_aboutImg {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%), url(./assets/img/png/aboutBgImg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 body {
   overflow-x: hidden;
 }
 .custom_vh {
-  min-height: calc(100vh - 164px);
+  min-height: calc(100vh - 174px);
 }
 .basinImg {
   background-image: url(./assets/img/png/basinImg.png);
@@ -76,5 +81,10 @@ body {
 @media (min-width: 768px) {
   .custom_vh {
     min-height: calc(100vh - 150px);
+  }
+}
+@media (min-width: 1280px) {
+  .custom_vh {
+    min-height: calc(100vh - 171px);
   }
 }
