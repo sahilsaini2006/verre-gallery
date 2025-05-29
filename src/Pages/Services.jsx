@@ -26,7 +26,7 @@ const Services = () => {
   };
   return (
     <>
-      <section className="xl:mt-[150px] lg:mt-[115px] md:mt-[85px] sm:mt-[70px] mt-14">
+      <section className="xl:mt-[100px] lg:mt-[75px] md:mt-[55px] sm:mt-[46px] mt-8">
         <div className="bg-[#2B2B2B] py-[60px]">
           <div className="my_container">
             <div className="md:block hidden">

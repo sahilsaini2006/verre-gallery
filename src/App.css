@@ -72,6 +72,8 @@ body {
   background-size: cover;
 }
 
+
+
 @media (max-width: 639.99px) {
   .custom_vh {
     min-height: calc(100vh - 123px);

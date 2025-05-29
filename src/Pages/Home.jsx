@@ -114,27 +114,43 @@ const Home = () => {
           <div className="my_container">
             <div className="flex items-center md:justify-between justify-center flex-wrap">
               <div className="md:flex items-center xl:gap-6 md:gap-4 gap-4 hidden">
-                <img src={blueStarRadius} alt="star" className="w-4 h-4" />
+                <img
+                  src={blueStarRadius}
+                  alt="star"
+                  className="w-4 h-4 lg:w-6 lg:h-6"
+                />
                 <Link
                   to="/shop"
                   className="xl:text-xl md:text-lg text-base text-[#2B2B2B] underline font-Helvetica"
                 >
                   SHOP NOW
                 </Link>
-                <img src={blueStarRadius} alt="star" className="w-4 h-4" />
+                <img
+                  src={blueStarRadius}
+                  alt="star"
+                  className="w-4 h-4 lg:w-6 lg:h-6"
+                />
               </div>
               <h2 className="text-center xl:text-5xl lg:text-[32px] md:text-[20px] text-2xl text-[#17313A] font-normal font-Sedan lg:px-4 md:px-3 ">
                 DARE TO DREAM, WE DO THE REST
               </h2>
               <div className="md:flex items-center xl:gap-6 md:gap-4 gap-4 hidden">
-                <img src={blueStarRadius} alt="star" className="w-4 h-4" />
+                <img
+                  src={blueStarRadius}
+                  alt="star"
+                  className="w-4 h-4 lg:w-6 lg:h-6"
+                />
                 <Link
                   to="/shop"
                   className="xl:text-xl md:text-lg text-base text-[#2B2B2B] underline font-Helvetica"
                 >
                   SHOP NOW
                 </Link>
-                <img src={blueStarRadius} alt="star" className="w-4 h-4" />
+                <img
+                  src={blueStarRadius}
+                  alt="star"
+                  className="w-4 h-4 lg:w-6 lg:h-6"
+                />
               </div>
             </div>
           </div>
