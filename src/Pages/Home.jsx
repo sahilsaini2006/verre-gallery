@@ -4,9 +4,9 @@ import {
   productData,
   productData2,
   testimonialData,
-} from "../components/Helper";
+} from "../components/utils/Helper";
 import { Link } from "react-router-dom";
-import BasinProduct from "../components/BasinProduct";
+import BasinProduct from "../components/cards/BasinProduct";
 import blueStarRadius from "../assets/img/png/blueStarRadius.png";
 import Slider from "react-slick";
 import timelessGlasswork from "../assets/img/png/timelessGlasswork.png";
@@ -15,7 +15,8 @@ import renaissanceBasin from "../assets/img/png/renaissanceBasin.png";
 import accessoriesBasin from "../assets/img/png/accessoriesBasin.png";
 import customBasin from "../assets/img/png/customBasin.png";
 import featuredImg from "../assets/img/png/featuredIMg.png";
-import Testimonials from "../components/Testimonials";
+import Testimonials from "../components/cards/Testimonials";
+import BlueButton from "../components/button/BlueButton";
 
 const Home = () => {
   const sliderRef = useRef(null);
@@ -52,13 +53,21 @@ const Home = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 640, // mobile
+        breakpoint: 640, 
         settings: {
           slidesToShow: 1,
         },
       },
     ],
   };
+
+  // --------------- button styling --------------
+  const shopBtn = `text-lg md:text-xl py-3 md:py-4 px-5 md:px-6 inline-block`;
+  const AboutUsBtn = `text-lg sm:text-xl lg:text-2xl py-2 sm:py-2.5 lg:py-3 px-8 sm:px-12 lg:px-20 inline-block`;
+  const exploreBtn = `text-lg sm:text-xl lg:text-2xl py-2 sm:py-2.5 lg:py-3 px-8 sm:px-12 lg:px-14 inline-block`;
+  const viewAllBtn = `text-lg sm:text-xl lg:text-2xl py-2 sm:py-2.5 lg:py-3 px-8 sm:px-12 md:px-16 lg:px-20 inline-block`;
+  const meetOurExpertsBtn = `md:text-xl sm:text-lg text-base py-3 lg:px-12 sm:px-9 px-7 inline-block`;
+  const subscribeBtn = `text-lg sm:text-xl md:text-2xl py-2 sm:pt-3 sm:pb-2 px-6 sm:px-10 md:px-14 inline-block w-full sm:w-auto text-center`;
 
   return (
     <>
@@ -84,7 +93,7 @@ const Home = () => {
           <Slider ref={sliderRef} {...cardSliderSettings}>
             {productData.map((item, index) => (
               <div key={index} className="px-4 h-full">
-                <div className="h-full flex ">
+                <div className="h-full ">
                   <BasinProduct mapData={item} />
                 </div>
               </div>
@@ -163,9 +172,7 @@ const Home = () => {
                   BASIN
                 </p>
                 <div className="mt-4 md:mt-5">
-                  <Link className="text-lg md:text-xl text-white bg-[#009DD9] py-3 md:py-4 px-6 md:px-7 inline-block border border-[#009DD9] hover:bg-white hover:text-[#009DD9] transition-all duration-300">
-                    VIEW PRODUCTS
-                  </Link>
+                  <BlueButton btnText="VIEW PRODCUTS" style={shopBtn} />
                 </div>
               </div>
             </div>
@@ -177,23 +184,19 @@ const Home = () => {
                   PEDESTAL
                 </p>
                 <div className="mt-4 md:mt-5">
-                  <Link className="text-lg md:text-xl text-white bg-[#009DD9] py-3 md:py-4 px-6 md:px-7 inline-block border border-[#009DD9] hover:bg-white hover:text-[#009DD9] transition-all duration-300">
-                    VIEW PRODUCTS
-                  </Link>
+                  <BlueButton btnText="VIEW PRODCUTS" style={shopBtn} />
                 </div>
               </div>
             </div>
 
             {/* Undermount */}
             <div className="w-full sm:w-[48%] lg:w-[32%] xl:w-[20%] min-h-[320px]">
-              <div className="undermountImg h-full flex flex-col justify-end p-6 md:p-8 lg:p-9">
+              <div className="undermountImg_ h-full flex flex-col justify-end p-6 md:p-8 lg:p-9">
                 <p className="text-white text-2xl md:text-[26px] font-Sedan">
                   UNDERMOUNT
                 </p>
                 <div className="mt-4 md:mt-5">
-                  <Link className="text-lg md:text-xl text-white bg-[#009DD9] py-3 md:py-4 px-6 md:px-7 inline-block border border-[#009DD9] hover:bg-white hover:text-[#009DD9] transition-all duration-300">
-                    VIEW PRODUCTS
-                  </Link>
+                  <BlueButton btnText="VIEW PRODCUTS" style={shopBtn} />
                 </div>
               </div>
             </div>
@@ -205,9 +208,7 @@ const Home = () => {
                   DROP-IN
                 </p>
                 <div className="mt-4 md:mt-5">
-                  <Link className="text-lg md:text-xl text-white bg-[#009DD9] py-3 md:py-4 px-6 md:px-7 inline-block border border-[#009DD9] hover:bg-white hover:text-[#009DD9] transition-all duration-300">
-                    VIEW PRODUCTS
-                  </Link>
+                  <BlueButton btnText="VIEW PRODCUTS" style={shopBtn} />
                 </div>
               </div>
             </div>
@@ -219,9 +220,7 @@ const Home = () => {
                   CUSTOM
                 </p>
                 <div className="mt-4 md:mt-5">
-                  <Link className="text-lg md:text-xl text-white bg-[#009DD9] py-3 md:py-4 px-6 md:px-7 inline-block border border-[#009DD9] hover:bg-white hover:text-[#009DD9] transition-all duration-300">
-                    VIEW PRODUCTS
-                  </Link>
+                  <BlueButton btnText="VIEW PRODCUTS" style={shopBtn} />
                 </div>
               </div>
             </div>
@@ -258,9 +257,7 @@ const Home = () => {
               </p>
 
               <div className="mt-8 sm:mt-9 lg:mt-10">
-                <Link className="inline-block text-lg sm:text-xl lg:text-2xl font-normal text-white bg-[#009DD9] py-2 sm:py-2.5 lg:py-3 px-8 sm:px-12 lg:px-20 border border-[#009DD9] hover:bg-white hover:text-[#009DD9] duration-500 font-Helvetica text-center">
-                  ABOUT US
-                </Link>
+                <BlueButton btnText="ABOUT US" style={AboutUsBtn} />
               </div>
             </div>
 
@@ -321,11 +318,10 @@ const Home = () => {
       </section>
 
       {/* !-- OUR CATALOGUES --  */}
-      <section className=" mt-[50px] *:sm:mt-[75px] md:mt-[100px] lg:mt-[150px] xl:mt-[175px]">
-        <div className="my_container px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0">
-            {/* Left Column - Image Cards */}
-            <div className="w-full lg:w-4/12 px-0 sm:px-3">
+      <section className="mt-12 pt-12">
+        <div className="my_container">
+          <div className="flex items-center justify-between flex-wrap">
+            <div className="w-12/12 sm:w-6/12 lg:w-4/12 px-[12px] order-1 lg:order-1 sm:order-2 mt-12 lg:mt-0">
               <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
                 <div className="relative">
                   <img
@@ -333,11 +329,11 @@ const Home = () => {
                     alt="creativoBasin"
                     className="w-full h-auto"
                   />
-                  <div className="absolute bottom-[15px] sm:bottom-[20px] md:bottom-[30px] left-[15px] sm:left-[25px] md:left-[35px] text-[#FAFAFA] text-left">
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.2] sm:leading-[40px] lg:leading-[50px] font-Sedan">
+                  <div className="absolute bottom-[15px] sm:bottom-[20px] md:bottom-[25px] left-[15px] sm:left-[20px] md:left-[25px] text-[#FAFAFA] text-left">
+                    <h3 className="text-2xl sm:text-[27px] lg:text-3xl font-normal leading-[1.2] sm:leading-[40px] lg:leading-[50px] font-Sedan">
                       CREATIVO
                     </h3>
-                    <p className="text-lg sm:text-xl lg:text-[26px] font-Sedan">
+                    <p className="text-lg sm:text-xl lg:text-2xl font-Sedan">
                       BASINS COLLECTION
                     </p>
                   </div>
@@ -348,11 +344,11 @@ const Home = () => {
                     alt="accessoriesBasin"
                     className="w-full h-auto"
                   />
-                  <div className="absolute bottom-[15px] sm:bottom-[20px] md:bottom-[30px] left-[15px] sm:left-[25px] md:left-[35px] text-[#FAFAFA] text-left">
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.2] sm:leading-[40px] lg:leading-[50px] font-Sedan">
+                  <div className="absolute bottom-[15px] sm:bottom-[20px] md:bottom-[25px] left-[15px] sm:left-[20px] md:left-[25px] text-[#FAFAFA] text-left">
+                    <h3 className="text-2xl sm:text-[27px] lg:text-3xl font-normal leading-[1.2] sm:leading-[40px] lg:leading-[50px] font-Sedan">
                       ACCESSORIES
                     </h3>
-                    <p className="text-lg sm:text-xl lg:text-[26px] font-Sedan">
+                    <p className="text-lg sm:text-xl lg:text-2xl font-Sedan">
                       COLLECTION
                     </p>
                   </div>
@@ -360,25 +356,22 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Middle Column - Content */}
-            <div className="w-full lg:w-4/12 px-0 sm:px-4">
-              <div className="text-center">
-                <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-5">
+            <div className="w-12/12 lg:w-4/12 px-[12px] order-2 lg:order-2 sm:order-1 mt-12">
+              <div className="flex items-center justify-center flex-col text-center">
+                <div className="flex items-center gap-6">
                   <img
-                    className="h-7 w-6 sm:h-8 sm:w-7 lg:h-9 lg:w-8"
+                    className="w-[10%]"
                     src={blueStarRadius}
                     alt="blueStarRadius"
                   />
-                  <p className="text-lg sm:text-xl font-normal font-Helvetica text-[#2B2B2B]">
-                    OUR CATALOGUES
-                  </p>
+                  <p className="text-[20px] font-Helvetica">OUR CATALOGUES</p>
                   <img
-                    className="h-7 w-6 sm:h-8 sm:w-7 lg:h-9 lg:w-8"
+                    className="w-[10%]"
                     src={blueStarRadius}
                     alt="blueStarRadius"
                   />
                 </div>
-                <p className="text-2xl sm:text-3xl lg:text-4xl font-normal font-Sedan text-[#17313A] mt-5 sm:mt-6 lg:mt-7 w-full sm:w-[95%] mx-auto">
+                <p className="text-2xl sm:text-4xl md:text-5xl lg:text-4xl font-normal font-Sedan text-[#17313A] mt-5 sm:mt-6 lg:mt-7 w-full sm:w-[95%] mx-auto">
                   The Regal Work Of Glass Masterpieces
                 </p>
                 <p className="text-base sm:text-lg lg:text-xl font-normal text-[#2B2B2B] mt-5 sm:mt-6 lg:mt-7 w-full sm:w-[93%] mx-auto">
@@ -387,15 +380,12 @@ const Home = () => {
                   royalty.
                 </p>
                 <div className="mt-6 sm:mt-7 lg:mt-8">
-                  <Link className="inline-block text-lg sm:text-xl lg:text-2xl font-normal text-white bg-[#009DD9] py-2 sm:py-2.5 lg:py-3 px-8 sm:px-12 lg:px-14 border border-[#009DD9] hover:bg-white hover:text-[#009DD9] duration-500 font-Helvetica">
-                    EXPLORE
-                  </Link>
+                  <BlueButton btnText="EXPLORE" style={exploreBtn} />
                 </div>
               </div>
             </div>
 
-            {/* Right Column - Image Cards */}
-            <div className="w-full lg:w-4/12 px-0 sm:px-3">
+            <div className="w-12/12 sm:w-6/12 lg:w-4/12 px-[12px] order-3 lg:order-3 sm:order-2 mt-12 lg:mt-0 ">
               <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
                 <div className="relative">
                   <img
@@ -403,11 +393,11 @@ const Home = () => {
                     alt="renaissanceBasin"
                     className="w-full h-auto"
                   />
-                  <div className="absolute bottom-[15px] sm:bottom-[20px] md:bottom-[30px] left-[15px] sm:left-[25px] md:left-[35px] text-[#FAFAFA] text-left">
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.2] sm:leading-[40px] lg:leading-[50px] font-Sedan uppercase">
+                  <div className="absolute bottom-[15px] sm:bottom-[20px] md:bottom-[25px] left-[15px] sm:left-[20px] md:left-[25px] text-[#FAFAFA] text-left">
+                    <h3 className="text-2xl sm:text-[27px] lg:text-3xl font-normal leading-[1.2] sm:leading-[40px] lg:leading-[50px] font-Sedan uppercase">
                       renaissance
                     </h3>
-                    <p className="text-lg sm:text-xl lg:text-[26px] font-Sedan">
+                    <p className="text-lg sm:text-xl lg:text-2xl font-Sedan">
                       BASINS COLLECTION
                     </p>
                   </div>
@@ -418,11 +408,11 @@ const Home = () => {
                     alt="customBasin"
                     className="w-full h-auto"
                   />
-                  <div className="absolute bottom-[15px] sm:bottom-[20px] md:bottom-[30px] left-[15px] sm:left-[25px] md:left-[35px] text-[#FAFAFA] text-left">
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.2] sm:leading-[40px] lg:leading-[50px] font-Sedan">
+                  <div className="absolute bottom-[15px] sm:bottom-[20px] md:bottom-[25px] left-[15px] sm:left-[20px] md:left-[25px] text-[#FAFAFA] text-left">
+                    <h3 className="text-2xl sm:text-[27px] lg:text-3xl font-normal leading-[1.2] sm:leading-[40px] lg:leading-[50px] font-Sedan uppercase">
                       CUSTOM
                     </h3>
-                    <p className="text-lg sm:text-xl lg:text-[26px] font-Sedan">
+                    <p className="text-lg sm:text-xl lg:text-2xl font-Sedan">
                       COLLECTION
                     </p>
                   </div>
@@ -516,14 +506,7 @@ const Home = () => {
             </div>
           </div>
           <div className="xl:mt-[57px] lg:mt-[48px] md:mt-10 mt-7 text-center">
-            <Link
-              to="#"
-              className="text-base sm:text-lg md:text-2xl font-normal font-['Helvetica'] text-[#009DD9] bg-white 
-        hover:text-white hover:bg-[#009DD9] border border-[#009DD9] 
-        py-3 px-10 md:px-24 duration-500 inline-block"
-            >
-              VIEW ALL
-            </Link>
+            <BlueButton btnText="VIEW ALL" style={viewAllBtn} />
           </div>
         </div>
       </section>
@@ -550,9 +533,10 @@ const Home = () => {
             </div>
             <div className="lg:w-4/12 w-full lg:mt-0 mt-6">
               <div className=" lg:text-end text-center">
-                <Link className="md:text-xl sm:text-lg text-base font-normal text-white bg-[#009DD9] py-3 lg:px-12 sm:px-9 px-7  border border-[#009DD9] hover:bg-white hover:text-[#009DD9] duration-500 font-Helvetica inline-block">
-                  MEET OUR EXPERTS
-                </Link>
+                <BlueButton
+                  btnText="MEET OUR EXPERTS"
+                  style={meetOurExpertsBtn}
+                />
               </div>
             </div>
           </div>
@@ -592,12 +576,11 @@ const Home = () => {
                 placeholder="Enter your email"
                 className="pt-2 pb-1 sm:pt-3 sm:pb-2 px-4 sm:px-6 md:px-8 border-2 border-[#17313A] text-[#6D6D6D] text-base sm:text-lg md:text-xl font-normal font-Helvetica w-full"
               />
-              <button
+              <BlueButton
                 type="submit"
-                className="text-lg sm:text-xl md:text-2xl font-normal text-white bg-[#009DD9] py-2 sm:pt-3 sm:pb-2 px-6 sm:px-10 md:px-14 border-2 border-[#009DD9] hover:bg-white hover:text-[#009DD9] duration-500 font-Helvetica w-full sm:w-auto text-center"
-              >
-                SUBSCRIBE
-              </button>
+                btnText="SUBSCRIBE"
+                style={subscribeBtn}
+              />
             </div>
 
             <div className="w-full sm:w-5/6 md:w-[70%] mx-auto text-xs sm:text-sm md:text-base font-normal font-Helvetica text-[#6D6D6D] mt-3 sm:mt-4 md:mt-5 px-4 sm:px-0 text-center">

@@ -8,12 +8,13 @@ import cartIcon from "../assets/img/svg/CartIcon.svg";
 import usaFlag from "../assets/img/svg/USAflag.svg";
 import cartRoundBasin from "../assets/img/png/cartRoundbasin.png";
 import cartHalfBasin from "../assets/img/png/cartHalfbasin.png";
-import dotsImg from "../assets/img/png/dots.png"
+import dotsImg from "../assets/img/png/dots.png";
+import BlueButton from "./button/BlueButton";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  
+
   useEffect(() => {
     if (isCartOpen) {
       document.body.style.overflow = "hidden";
@@ -39,12 +40,16 @@ const NavBar = () => {
     };
   }, [isMenuOpen]);
 
+
+  // -------------- button- styleing ----------------
+  const buyBtn = `w-full py-2 sm:text-lg text-base font-semibold sm:mt-4 mt-3`;
+
   return (
     <>
       {isCartOpen && (
         <div
           className="fixed inset-0 bg-[#44444466] backdrop-blur-sm z-30 pointer-events-auto"
-          style={{ marginTop: "your-navbar-height" }} // Adjust this to match your navbar height
+          style={{ marginTop: "your-navbar-height" }} 
           onClick={() => setIsCartOpen(false)}
         />
       )}
@@ -220,8 +225,8 @@ const NavBar = () => {
               {isCartOpen && (
                 <div className="fixed bottom-0 right-0 w-[90%] sm:w-[420px] bg-white z-50 shadow-xl transition-transform duration-500 ease-in-out translate-x-0 custom_vh">
                   {/* Header */}
-                  <div className="flex items-center justify-between p-4 border-b">
-                    <h2 className="text-[20px] font-[600] font-Helvetica">
+                  <div className="flex items-center justify-between sm:p-4 p-2 border-b">
+                    <h2 className="sm:text-xl text-lg font-[600] font-Helvetica">
                       My Cart
                     </h2>
                     <button
@@ -232,28 +237,27 @@ const NavBar = () => {
                     </button>
                   </div>
 
-                  <div className="flex flex-col justify-between min-h-[70vh]">
+                  <div className="flex flex-col justify-between xl:min-h-[70vh] md:min-h-[60vh] min-h-[70vh]">
                     <div className="pt-4 pb-2 px-4">
-                      <div className="flex items-start gap-4 border-b pb-4">
+                      <div className="flex items-start sm:gap-4 gap-2 border-b pb-4">
                         <img
                           src={cartRoundBasin}
                           alt="item"
-                          className="w-[100px] h-[100px] object-contain"
+                          className="sm:w-[100px] w-[75px] h-[75px] sm:h-[100px] "
                         />
                         <div className="flex-1">
-                          <p className="font-bold text-base text-[#2B2B2B] font-Helvetica">
-                            ROUND Basin - on small pedestal with wrought iron
-                            support
+                          <p className="font-bold sm:text-base text-sm text-[#2B2B2B] font-Helvetica">
+                            ROUND Basin - on small pedestal with iron support
                           </p>
-                          <p className="text-sm text-[#6D6D6D] mt-2 font-Helvetica">
+                          <p className="sm:text-sm text-[12px]   text-[#6D6D6D] mt-2 font-Helvetica">
                             LAS101
                           </p>
                           <div className="flex items-center mt-3 gap-3">
-                            <button className="border border-gray-300 px-[10px] py-[2px] text-sm">
+                            <button className="border border-gray-300 px-[10px] py-[2px] sm:text-sm text-[12px] ">
                               −
                             </button>
-                            <span className="text-sm">1</span>
-                            <button className="border border-gray-300 px-[10px] py-[2px] text-sm">
+                            <span className="sm:text-sm text-[12px] ">1</span>
+                            <button className="border border-gray-300 px-[10px] py-[2px] sm:text-sm text-[12px] ">
                               +
                             </button>
                             <button className="ml-auto text-[#999] underline text-[13px]">
@@ -264,9 +268,9 @@ const NavBar = () => {
                       </div>
 
                       {/* Suggestions */}
-                      <div className="pt-6">
+                      <div className="sm:pt-6 pt-4">
                         <div className="flex items-center justify-between mb-3">
-                          <p className="uppercase text-base text-[#6D6D6D] font-Helvetica">
+                          <p className="uppercase sm:text-base text-sm text-[#6D6D6D] font-Helvetica">
                             ADD MORE ITEMS
                           </p>
                           <div>
@@ -280,13 +284,13 @@ const NavBar = () => {
                             className="w-[100px] h-[104px]"
                           />
                           <div className="flex-1">
-                            <p className="font-bold text-base text-[#2B2B2B] font-Helvetica">
+                            <p className="font-bold sm:text-base text-sm text-[#2B2B2B] font-Helvetica">
                               Round vessel 3 levels
                             </p>
-                            <p className="text-sm text-[#6D6D6D] mt-2 font-Helvetica">
+                            <p className="sm:text-sm text-[12px] text-[#6D6D6D] mt-2 font-Helvetica">
                               LAS533
                             </p>
-                            <button className="text-sm text-[#2B2B2B] underline mt-3">
+                            <button className="text-sm text-[#2B2B2B] underline sm:mt-3 mt-2">
                               Add to cart
                             </button>
                           </div>
@@ -294,19 +298,18 @@ const NavBar = () => {
                       </div>
                     </div>
 
-                    <div className="mb-6 ">
-                      <div className="px-9">
-                        <button className="w-full border border-black py-2 text-lg font-medium px-4">
+                    <div className="sm:mb-6 mb-4 ">
+                      <div className="md:px-9 sm:px-7 px-4">
+                        <button className="w-full border border-black py-2 sm:text-lg text-base font-medium px-4">
                           CONTINUE SHOPPING
                         </button>
                       </div>
-                      <div className="border-t px-9 pt-4 mt-5">
-                        <p className="text-sm text-[#999] px-9">
+                      <div className="border-t md:px-9 sm:px-7 px-4 sm:pt-4 pt-3 sm:mt-5 mt-3">
+                        <p className="text-sm text-[#999]">
                           *Taxes and shipping calculated at checkout
                         </p>
-                        <button className="w-full bg-[#00AEEF] text-white py-2 text-lg font-semibold mt-4">
-                          BUY NOW
-                        </button>
+                     
+                        <BlueButton btnText="BUY NOW" style={buyBtn} />
                       </div>
                     </div>
                   </div>

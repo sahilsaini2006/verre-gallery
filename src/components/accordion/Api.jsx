@@ -25,3 +25,17 @@ export const Questions = [
       "Thermo formed glass is a material that is quite sturdy and stable after being processed. Just think about your window panes. Thermo formed glass is resistant to scratches. It will also keep its shimmering color for a long time.",
   },
 ];
+
+export const Questions2 = [
+  {
+    id: 1,
+    question: "OUR WARRANTY & GURANTEE",
+    answer: "5-Year Warranty ,Leak-Proof Guarantee,Replacement Assurance",
+  },
+  {
+    id: 2,
+    question: "SHIPPING & RETURNS",
+    answer:
+      "Delivery in 3-7 working days ,7-day return for damaged/defective items",
+  },
+];

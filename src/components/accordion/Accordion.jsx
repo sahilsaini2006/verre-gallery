@@ -3,16 +3,17 @@ import "./Accordion.css";
 import { Questions } from "./Api";
 import MyAccordion from "./MyAccordion";
 
-const Accordion = () => {
+const Accordion = ({ accordionStyle }) => {
   const [activeId, setActiveId] = useState(null);
 
   const toggleAccordion = (id) => {
     setActiveId((prevId) => (prevId === id ? null : id));
   };
 
+
   return (
     <>
-      <div className="xl:w-[70%] lg:w-[80%] sm:w-[90%] w-full m-auto ">
+      <div className={`${accordionStyle}`}>
         {Questions.map((item) => (
           <MyAccordion
             key={item.id}

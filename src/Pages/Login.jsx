@@ -2,8 +2,10 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import blueStarRadius from "../assets/img/png/blueStarRadius.png";
 import { Link } from "react-router-dom";
+import BlueButton from "../components/button/BlueButton";
 
 const Login = () => {
+  const logInBtn = `lg:text-2xl md:text-xl text-lg py-2 sm:pt-2 sm:pb-3 px-7 sm:px-10 md:px-14`;
   return (
     <>
       {/* !-- VERRE Gallery welcome you back -- */}
@@ -70,9 +72,7 @@ const Login = () => {
               />
             </form>
             <div className="text-center xl:mt-15 lg:mt-11 md:mt-8 mt-6">
-              <button className="lg:text-2xl md:text-xl text-lg font-normal font-Helvetica text-white bg-[#009DD9] py-2 sm:pt-2 sm:pb-3 px-7 sm:px-10 md:px-14">
-                Log in
-              </button>
+              <BlueButton btnText="Log in" style={logInBtn} />
               <p className="md:text-lg text-base font-noraml text-[#6D6D6D] font-Helvetica md:mt-7 mt-4">
                 Don’t have an account ?{" "}
                 <Link className="underline">SIGN UP</Link>

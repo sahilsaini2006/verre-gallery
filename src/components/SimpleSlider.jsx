@@ -3,6 +3,7 @@ import Slider from "react-slick";
 
 import NavBar from "./NavBar";
 import "../Slider.css";
+import BlueButton from "./button/BlueButton";
 
 export default function SimpleSlider() {
   var settings = {
@@ -14,8 +15,11 @@ export default function SimpleSlider() {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: false,
-    arrows: false,  
+    arrows: false,
   };
+
+  // ------------------ shopBtn ------------------
+  const shopBtn = ` md:text-[26px] sm:text-xl text-lg md:py-3 py-2 lg:px-[65px] md:px-[50px] sm:px-[42px] px-9`;
 
   return (
     <>
@@ -33,9 +37,7 @@ export default function SimpleSlider() {
                   basins
                 </p>
                 <div className="lg:mt-[46px] sm:mt-[32px] mt-5">
-                  <button className="lg:text-3xl md:text-2xl sm:text-xl text-lg font-normal font-Helvetica text-white bg-[#009DD9] md:py-[19px] py-3 md:px-[78px] sm:px-[60px] px-[40px] inline-block  cursor-pointer">
-                    SHOP NOW
-                  </button>
+                  <BlueButton btnText="SHOP NOW" style={shopBtn} />
                 </div>
 
                 <p className="lg:text-2xl sm:text-xl text-lg font-Helvetica font-normal text-white md:mt-[32px] sm:mt-[26px] mt-5">
@@ -55,9 +57,7 @@ export default function SimpleSlider() {
                   basins
                 </p>
                 <div className="lg:mt-[46px] sm:mt-[32px] mt-5">
-                  <button className="lg:text-3xl md:text-2xl sm:text-xl text-lg font-normal font-Helvetica text-white bg-[#009DD9] md:py-[19px] py-3 md:px-[78px] sm:px-[60px] px-[40px] inline-block  cursor-pointer">
-                    SHOP NOW
-                  </button>
+                  <BlueButton btnText="SHOP NOW" style={shopBtn} />
                 </div>
 
                 <p className="lg:text-2xl sm:text-xl text-lg font-Helvetica font-normal text-white md:mt-[32px] sm:mt-[26px] mt-5">
@@ -77,9 +77,7 @@ export default function SimpleSlider() {
                   basins
                 </p>
                 <div className="lg:mt-[46px] sm:mt-[32px] mt-5">
-                  <button className="lg:text-3xl md:text-2xl sm:text-xl text-lg font-normal font-Helvetica text-white bg-[#009DD9] md:py-[19px] py-3 md:px-[78px] sm:px-[60px] px-[40px] inline-block  cursor-pointer">
-                    SHOP NOW
-                  </button>
+                  <BlueButton btnText="SHOP NOW" style={shopBtn} />
                 </div>
 
                 <p className="lg:text-2xl sm:text-xl text-lg font-Helvetica font-normal text-white md:mt-[32px] sm:mt-[26px] mt-5">
@@ -99,9 +97,7 @@ export default function SimpleSlider() {
                   basins
                 </p>
                 <div className="lg:mt-[46px] sm:mt-[32px] mt-5">
-                  <button className="lg:text-3xl md:text-2xl sm:text-xl text-lg font-normal font-Helvetica text-white bg-[#009DD9] md:py-[19px] py-3 md:px-[78px] sm:px-[60px] px-[40px] inline-block  cursor-pointer">
-                    SHOP NOW
-                  </button>
+                  <BlueButton btnText="SHOP NOW" style={shopBtn} />
                 </div>
 
                 <p className="lg:text-2xl sm:text-xl text-lg font-Helvetica font-normal text-white md:mt-[32px] sm:mt-[26px] mt-5">
@@ -121,9 +117,7 @@ export default function SimpleSlider() {
                   basins
                 </p>
                 <div className="lg:mt-[46px] sm:mt-[32px] mt-5">
-                  <button className="lg:text-3xl md:text-2xl sm:text-xl text-lg font-normal font-Helvetica text-white bg-[#009DD9] md:py-[19px] py-3 md:px-[78px] sm:px-[60px] px-[40px] inline-block  cursor-pointer">
-                    SHOP NOW
-                  </button>
+                  <BlueButton btnText="SHOP NOW" style={shopBtn} />
                 </div>
 
                 <p className="lg:text-2xl sm:text-xl text-lg font-Helvetica font-normal text-white md:mt-[32px] sm:mt-[26px] mt-5">
@@ -132,7 +126,6 @@ export default function SimpleSlider() {
               </div>
             </div>
           </div>
-        
         </Slider>
       </div>
     </>

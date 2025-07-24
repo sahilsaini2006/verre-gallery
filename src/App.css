@@ -51,7 +51,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.undermountImg {
+.undermountImg_ {
   background-image: url(./assets/img/png/undermountImg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -72,6 +72,24 @@ body {
   background-size: cover;
 }
 
+/* -------------------- product page -------------- */
+.productBasin{
+  background-image: url(./assets/img/png/productBasin.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  }
+.pedestalBasin{
+  background-image: url(./assets/img/png/pedestalBasin.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 300px;
+  }
+.undermountImg{
+  background-image: url(./assets/img/png/undermountBasin.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 300px;
+  }
 
 
 @media (max-width: 639.99px) {

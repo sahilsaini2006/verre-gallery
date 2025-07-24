@@ -4,14 +4,11 @@ import timelessGlasswork from "../assets/img/png/timelessGlasswork.png";
 import blueStarRadius from "../assets/img/png/blueStarRadius.png";
 import glassImg1 from "../assets/img/png/glassImg1.png";
 import glassImg2 from "../assets/img/png/glassImg2.png";
-// import innovation from "../assets/img/png/innovationImg.png";
-// import timeLessImg from "../assets/img/png/timeLessImg.png";
-// import foreverImg from "../assets/img/png/foreverImg.png";
-// import porousGlass from "../assets/img/png/porousGlass.png";
 import { Link } from "react-router-dom";
-import { testimonialData } from "../components/Helper";
-import Testimonials from "../components/Testimonials";
+import { testimonialData } from "../components/utils/Helper";
+import Testimonials from "../components/cards/Testimonials";
 import Slider from "react-slick";
+import BlueButton from "../components/button/BlueButton";
 
 const About = () => {
   const sliderRef3 = useRef(null);
@@ -31,6 +28,11 @@ const About = () => {
       },
     ],
   };
+
+  const viewAllBtn = `text-lg sm:text-xl lg:text-2xl py-2 sm:py-2.5 lg:py-3 px-8 sm:px-12 md:px-16 lg:px-20 inline-block`;
+  const meetOurExpertsBtn = `md:text-xl sm:text-lg text-base py-3 lg:px-12 sm:px-9 px-7 inline-block`;
+  const subscribeBtn = `text-lg sm:text-xl md:text-2xl py-2 sm:pt-3 sm:pb-2 px-6 sm:px-10 md:px-14 inline-block w-full sm:w-auto text-center`;
+
   return (
     <>
       {/* !-- header section -- */}
@@ -172,7 +174,7 @@ const About = () => {
 
       {/* !-- Our Commitment to Quality & Craftsmanship -- */}
 
-      <section className="xl:mt-[170px] lg:mt-[135px] md:mt-[105px] sm:mt-[80px] mt-[60px]">
+      <section className="xl:mt-[170px] lg:mt-[135px] md:mt-[105px] sm:mt-[80px] mt-[60px] ">
         <div className="bg_craftsmanship py-[60px] sm:py-[80px] md:py-[90px] lg:py-[105px]">
           <div className="my_container mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header Section */}
@@ -334,14 +336,9 @@ const About = () => {
             </div>
           </div>
           <div className="xl:mt-[57px] lg:mt-[48px] md:mt-10 mt-7 text-center">
-            <Link
-              to="#"
-              className="text-base sm:text-lg md:text-2xl font-normal font-['Helvetica'] text-[#009DD9] bg-white 
-        hover:text-white hover:bg-[#009DD9] border border-[#009DD9] 
-        py-3 px-10 md:px-24 duration-500 inline-block"
-            >
-              VIEW ALL
-            </Link>
+            <div className="xl:mt-[57px] lg:mt-[48px] md:mt-10 mt-7 text-center">
+              <BlueButton btnText="VIEW ALL" style={viewAllBtn} />
+            </div>
           </div>
         </div>
       </section>
@@ -368,9 +365,10 @@ const About = () => {
             </div>
             <div className="lg:w-4/12 w-full lg:mt-0 mt-6">
               <div className=" lg:text-end text-center">
-                <Link className="md:text-xl sm:text-lg text-base font-normal text-white bg-[#009DD9] py-3 lg:px-12 sm:px-9 px-7  border border-[#009DD9] hover:bg-white hover:text-[#009DD9] duration-500 font-Helvetica inline-block">
-                  MEET OUR EXPERTS
-                </Link>
+                <BlueButton
+                  btnText="MEET OUR EXPERTS"
+                  style={meetOurExpertsBtn}
+                />
               </div>
             </div>
           </div>
@@ -387,7 +385,7 @@ const About = () => {
               alt="blueStarRadius"
             />
             <p className="text-lg sm:text-xl font-normal font-Helvetica text-[#2B2B2B]">
-              OUR CATALOGUES
+              SUBSCRIBE TO OUR E-MAILS
             </p>
             <img
               className="h-7 w-6 sm:h-8 sm:w-7 md:h-9 md:w-8"
@@ -410,12 +408,11 @@ const About = () => {
                 placeholder="Enter your email"
                 className="pt-2 pb-1 sm:pt-3 sm:pb-2 px-4 sm:px-6 md:px-8 border-2 border-[#17313A] text-[#6D6D6D] text-base sm:text-lg md:text-xl font-normal font-Helvetica w-full"
               />
-              <button
+              <BlueButton
                 type="submit"
-                className="text-lg sm:text-xl md:text-2xl font-normal text-white bg-[#009DD9] py-2 sm:pt-3 sm:pb-2 px-6 sm:px-10 md:px-14 border-2 border-[#009DD9] hover:bg-white hover:text-[#009DD9] duration-500 font-Helvetica w-full sm:w-auto text-center"
-              >
-                SUBSCRIBE
-              </button>
+                btnText="SUBSCRIBE"
+                style={subscribeBtn}
+              />
             </div>
 
             <div className="w-full sm:w-5/6 md:w-[70%] mx-auto text-xs sm:text-sm md:text-base font-normal font-Helvetica text-[#6D6D6D] mt-3 sm:mt-4 md:mt-5 px-4 sm:px-0 text-center">

@@ -2,9 +2,16 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import blueStarRadius from "../assets/img/png/blueStarRadius.png";
 import rightArrowImg from "../assets/img/png/rightArrowImg.png";
-import Accordion from "../components/accordion/accordion";
+import Accordion from "../components/accordion/Accordion";
+import BlueButton from "../components/button/BlueButton";
 
+// ----------------- css -----------------
+const parentCss = `xl:w-[70%] lg:w-[80%] sm:w-[90%] w-full m-auto`;
+
+  
 const Contact = () => {
+
+  const sendMassageBtn = `text-lg sm:text-xl md:text-2xl py-2 sm:pt-[10px] sm:pb-[8px] px-8 sm:px-10 md:px-12 lg:px-[50px] inline-block`;
   return (
     <>
       {/* Need assistance? */}
@@ -70,12 +77,7 @@ const Contact = () => {
               </div>
 
               <div className="text-center mt-8 sm:mt-10 md:mt-12">
-                <button
-                  type="submit"
-                  className="text-lg sm:text-xl md:text-2xl font-Helvetica text-white bg-[#009DD9] py-2 sm:pt-[10px] sm:pb-[8px] px-8 sm:px-10 md:px-12 lg:px-[50px] inline-block"
-                >
-                  SEND YOUR MESSAGE
-                </button>
+                <BlueButton type="submit" btnText="SEND YOUR MESSAGE" style={sendMassageBtn} />
                 <p className="text-sm sm:text-base font-normal font-Helvetica text-[#6D6D6D] mt-2 sm:mt-3  px-4">
                   If you have any questions, you can take a look at our FAQ's.
                   Another request? Our team is at your disposal to answer it.
@@ -179,7 +181,7 @@ const Contact = () => {
 
           {/* Accordion Container */}
           <div className=" mt-8 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-[100px]">
-            <Accordion />
+            <Accordion accordionStyle={parentCss} />
           </div>
         </div>
       </section>
